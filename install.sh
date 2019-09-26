@@ -9,6 +9,9 @@
 // Cliquer sur la ligne se connecter dans le terminal
 gcloud container clusters get-credentials standard-cluster-1 --zone us-central1-a --project x-alcove-00000
 
+// Changer la région 
+gcloud config set compute/zone europe-west1
+
 // Vérifier la version du serveur et du client
 kubectl version
 // Réponse
