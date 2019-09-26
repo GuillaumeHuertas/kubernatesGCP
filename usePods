@@ -1,0 +1,10 @@
+// Utilisation d'un premier pod (pour vérifier que tout fonvtionne bien)
+kubectl run kuard --image=gcr.io/kuar-demo/kuard-amd64:1
+// Vérification de la présence du pod
+kubectl get pods
+// Réponse 
+NAME                     READY   STATUS    RESTARTS   AGE
+kuard-54896c6d99-z567n   1/1     Running   0          6s
+// Détruire le pod
+kubectl delete deployments/kuard
+
