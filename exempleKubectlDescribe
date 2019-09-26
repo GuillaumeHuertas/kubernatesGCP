@@ -1,0 +1,95 @@
+Name:               gke-standard-cluster-1-default-pool-c2ffb374-fcrg
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/fluentd-ds-ready=true
+                    beta.kubernetes.io/instance-type=n1-standard-1
+                    beta.kubernetes.io/os=linux
+                    cloud.google.com/gke-nodepool=default-pool
+                    cloud.google.com/gke-os-distribution=cos
+                    failure-domain.beta.kubernetes.io/region=us-central1
+                    failure-domain.beta.kubernetes.io/zone=us-central1-a
+                    kubernetes.io/hostname=gke-standard-cluster-1-default-pool-c2ffb374-fcrg
+Annotations:        container.googleapis.com/instance_id: 8835503107445177716
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Thu, 26 Sep 2019 11:25:54 +0200
+Taints:             <none>
+Unschedulable:      false
+Conditions:
+  Type                          Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                          ------  -----------------                 ------------------                ------                       -------
+  KernelDeadlock                False   Thu, 26 Sep 2019 11:48:32 +0200   Thu, 26 Sep 2019 11:24:20 +0200   KernelHasNoDeadlock          kernel has no deadlock
+  ReadonlyFilesystem            False   Thu, 26 Sep 2019 11:48:32 +0200   Thu, 26 Sep 2019 11:24:20 +0200   FilesystemIsNotReadOnly      Filesystem is not read-only
+  FrequentUnregisterNetDevice   False   Thu, 26 Sep 2019 11:48:32 +0200   Thu, 26 Sep 2019 11:29:22 +0200   UnregisterNetDevice          node is functioning properly
+  FrequentKubeletRestart        False   Thu, 26 Sep 2019 11:48:32 +0200   Thu, 26 Sep 2019 11:29:21 +0200   FrequentKubeletRestart       kubelet is functioning properly
+  FrequentDockerRestart         False   Thu, 26 Sep 2019 11:48:32 +0200   Thu, 26 Sep 2019 11:29:23 +0200   FrequentDockerRestart        docker is functioning properly
+  FrequentContainerdRestart     False   Thu, 26 Sep 2019 11:48:32 +0200   Thu, 26 Sep 2019 11:29:24 +0200   FrequentContainerdRestart    containerd is functioning properly
+  CorruptDockerOverlay2         False   Thu, 26 Sep 2019 11:48:32 +0200   Thu, 26 Sep 2019 11:29:21 +0200   CorruptDockerOverlay2        docker overlay2 is functioning properly
+  NetworkUnavailable            False   Thu, 26 Sep 2019 11:25:55 +0200   Thu, 26 Sep 2019 11:25:55 +0200   RouteCreated                 NodeController create implicit route
+  MemoryPressure                False   Thu, 26 Sep 2019 11:48:57 +0200   Thu, 26 Sep 2019 11:25:54 +0200   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure                  False   Thu, 26 Sep 2019 11:48:57 +0200   Thu, 26 Sep 2019 11:25:54 +0200   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure                   False   Thu, 26 Sep 2019 11:48:57 +0200   Thu, 26 Sep 2019 11:25:54 +0200   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                         True    Thu, 26 Sep 2019 11:48:57 +0200   Thu, 26 Sep 2019 11:25:55 +0200   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:   10.128.0.3
+  ExternalIP:   35.188.177.8
+  InternalDNS:  gke-standard-cluster-1-default-pool-c2ffb374-fcrg.us-central1-a.c.x-alcove-254109.internal
+  Hostname:     gke-standard-cluster-1-default-pool-c2ffb374-fcrg.us-central1-a.c.x-alcove-254109.internal
+Capacity:
+ attachable-volumes-gce-pd:  128
+ cpu:                        1
+ ephemeral-storage:          98868448Ki
+ hugepages-2Mi:              0
+ memory:                     3786944Ki
+ pods:                       110
+Allocatable:
+ attachable-volumes-gce-pd:  128
+ cpu:                        940m
+ ephemeral-storage:          47093746742
+ hugepages-2Mi:              0
+ memory:                     2701504Ki
+ pods:                       110
+System Info:
+ Machine ID:                 4729eebdc334bb96ec3b31c41147f00f
+ System UUID:                4729EEBD-C334-BB96-EC3B-31C41147F00F
+ Boot ID:                    2358c5f0-6f86-4279-ac8a-d7d9d1b0cf47
+ Kernel Version:             4.14.127+
+ OS Image:                   Container-Optimized OS from Google
+ Operating System:           linux
+ Architecture:               amd64
+ Container Runtime Version:  docker://18.9.3
+ Kubelet Version:            v1.13.7-gke.8
+ Kube-Proxy Version:         v1.13.7-gke.8
+PodCIDR:                     10.8.1.0/24
+ProviderID:                  gce://x-alcove-254109/us-central1-a/gke-standard-cluster-1-default-pool-c2ffb374-fcrg
+Non-terminated Pods:         (5 in total)
+  Namespace                  Name                                                            CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                  ----                                                            ------------  ----------  ---------------  -------------  ---
+  kube-system                fluentd-gcp-v3.2.0-9w9jz                                        100m (10%)    1 (106%)    200Mi (7%)       500Mi (18%)    22m
+  kube-system                kube-dns-6987857fdb-nqppz                                       260m (27%)    0 (0%)      110Mi (4%)       170Mi (6%)     22m
+  kube-system                kube-proxy-gke-standard-cluster-1-default-pool-c2ffb374-fcrg    100m (10%)    0 (0%)      0 (0%)           0 (0%)         23m
+  kube-system                metrics-server-v0.3.1-57c75779f-2dzdz                           48m (5%)      143m (15%)  105Mi (3%)       355Mi (13%)    22m
+  kube-system                prometheus-to-sd-kcz57                                          1m (0%)       3m (0%)     20Mi (0%)        20Mi (0%)      23m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource                   Requests     Limits
+  --------                   --------     ------
+  cpu                        509m (54%)   1146m (121%)
+  memory                     435Mi (16%)  1045Mi (39%)
+  ephemeral-storage          0 (0%)       0 (0%)
+  attachable-volumes-gce-pd  0            0
+Events:
+  Type    Reason                     Age                From                                                                Message
+  ----    ------                     ----               ----                                                                -------
+  Normal  Starting                   23m                kubelet, gke-standard-cluster-1-default-pool-c2ffb374-fcrg          Starting kubelet.
+  Normal  NodeHasSufficientMemory    23m (x2 over 23m)  kubelet, gke-standard-cluster-1-default-pool-c2ffb374-fcrg          Node gke-standard-cluster-1-default-pool-c2ffb374-fcrg status is now: NodeHasSufficientMemory
+  Normal  NodeHasNoDiskPressure      23m (x2 over 23m)  kubelet, gke-standard-cluster-1-default-pool-c2ffb374-fcrg          Node gke-standard-cluster-1-default-pool-c2ffb374-fcrg status is now: NodeHasNoDiskPressure
+  Normal  NodeHasSufficientPID       23m (x2 over 23m)  kubelet, gke-standard-cluster-1-default-pool-c2ffb374-fcrg          Node gke-standard-cluster-1-default-pool-c2ffb374-fcrg status is now: NodeHasSufficientPID
+  Normal  NodeAllocatableEnforced    23m                kubelet, gke-standard-cluster-1-default-pool-c2ffb374-fcrg          Updated Node Allocatable limit across pods
+  Normal  NodeReady                  23m                kubelet, gke-standard-cluster-1-default-pool-c2ffb374-fcrg          Node gke-standard-cluster-1-default-pool-c2ffb374-fcrg status is now: NodeReady
+  Normal  Starting                   23m                kube-proxy, gke-standard-cluster-1-default-pool-c2ffb374-fcrg       Starting kube-proxy.
+  Normal  FrequentKubeletRestart     19m                systemd-monitor, gke-standard-cluster-1-default-pool-c2ffb374-fcrg  Node condition FrequentKubeletRestart is now: False, reason: FrequentKubeletRestart
+  Normal  CorruptDockerOverlay2      19m                docker-monitor, gke-standard-cluster-1-default-pool-c2ffb374-fcrg   Node condition CorruptDockerOverlay2 is now: False, reason: CorruptDockerOverlay2
+  Normal  UnregisterNetDevice        19m                kernel-monitor, gke-standard-cluster-1-default-pool-c2ffb374-fcrg   Node condition FrequentUnregisterNetDevice is now: False, reason: UnregisterNetDevice
+  Normal  FrequentDockerRestart      19m                systemd-monitor, gke-standard-cluster-1-default-pool-c2ffb374-fcrg  Node condition FrequentDockerRestart is now: False, reason: FrequentDockerRestart
+  Normal  FrequentContainerdRestart  19m                systemd-monitor, gke-standard-cluster-1-default-pool-c2ffb374-fcrg  Node condition FrequentContainerdRestart is now: False, reason: FrequentContainerdRestart
