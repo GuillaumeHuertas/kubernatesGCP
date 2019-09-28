@@ -17,3 +17,56 @@ kubectl get pods
 // Réponse 
 NAME    READY   STATUS    RESTARTS   AGE
 kuard   1/1     Running   0          15m
+
+// Un pod peut contenir plusieurs contenaires 
+
+// INFROMATION détaillé sur les pods
+kubectl describe pods kuard
+
+// SUPRESSION d'un pod
+
+// On peut utiliser le nom d'un pod pour le supprimer 
+kubectl delete pod/kuard
+// ou le fichier qui a permis de le créer 
+kubeclt delete -f kuard-pod.yaml
+
+// Utiliser la redirection de port 
+kubectl port-forward kuard 8080:8080
+// accéder au pod et à l'interface wed de kuard de l'oridanteur local
+// http://localhost:8080
+
+// Obtenir des informations avec les logs
+kubectl logs kuard
+// Obtenir les logs en continu 
+kubectl logs kuard -f 
+
+// Exécuter une commande sur le container 
+kubectl exec kuard date //Obtenir la date 
+// Session interactive (se connecter au contenaire)
+kubectl exec -it kuard bash
+
+// COPIE DE FICHIERS
+
+// Copie de fichier du contenaire au PC 
+kubectl cp <nom-du-pod>:/capture/capture3.txt ./capture3.txt
+
+// Copie de fichier du PC au contenaire 
+kubectl cp $HOME/config.txt <nom-du-pod>:/config.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
