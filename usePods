@@ -53,7 +53,13 @@ kubectl cp <nom-du-pod>:/capture/capture3.txt ./capture3.txt
 // Copie de fichier du PC au contenaire 
 kubectl cp $HOME/config.txt <nom-du-pod>:/config.txt
 
-
+// Sonde d'activité 
+// Utilisation du manifeste kuard-pod-health.yaml
+// Ce manifeste contient une sonde 
+// Pour créer le pod 
+kubectl apply -f kuard-pod-health.yaml
+// Faire une redirection de port 
+kubectl port-forward kuard 8080:8080
 
 
 
