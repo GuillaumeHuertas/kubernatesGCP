@@ -26,3 +26,13 @@ kubectl run bandicoot-staging \
 
 # Afficher les pods et leurs étiquettes (labels)
 kubectl get deployments --show-labels
+# Modification des étiquettes 
+kubectl label deployments alpaca-test "canary=true"
+# Afficher la valeur d'une étiquette 
+kubectl get deployments -L canary
+# Supprimer le label avec le "-"
+kubectl label deployments alpaca-test "canary-"
+
+# Sélecteur d'étiquette
+kubectl get pods --show-labels
+
